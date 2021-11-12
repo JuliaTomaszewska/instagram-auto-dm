@@ -8,7 +8,7 @@ x = 0
 
 def dmer():
     global x
-    usrnames = ['instagram', 'twitter']  # username whom you will send the message
+    usrnames = ['julia_.tomaszewska', 'miz_ue']  # username whom you will send the message
 
     chrome_options = Options()
     chrome_options.add_argument(
@@ -21,8 +21,8 @@ def dmer():
     usrname_bar = browser.find_element_by_name('username')
     passwrd_bar = browser.find_element_by_name('password')
 
-    username = 'USERNAME'  # Enter your username here
-    password = 'PASSWORD'  # Enter your password here
+    username = 'FreePeerTutoring'  # Enter your username here
+    password = 'fptofficer22!'  # Enter your password here
 
     usrname_bar.send_keys(username)
     passwrd_bar.send_keys(password + Keys.ENTER)
@@ -50,7 +50,7 @@ def dmer():
         time.sleep(6)
 
         txt_box = browser.find_element_by_tag_name('textarea')
-        txt_box.send_keys(f"Hi @{usrnames} ! What's up ?")  # Customize your message
+        txt_box.send_keys(f"Hello! My name is Julia.")  # Customize your message
 
         time.sleep(2)
 
@@ -78,7 +78,7 @@ def dmer():
     x += 1
 
 
-timee = "08:51"  # Specific Time When The message will be send
+timee = "20:51"  # Specific Time When The message will be send
 
 try:
     schedule.every().day.at(timee).do(dmer)
